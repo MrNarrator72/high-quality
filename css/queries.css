@@ -1,0 +1,150 @@
+/****************************/
+/* Below 1344px (1344: Smaller Desktops  84em = 1344px ) */
+/****************************/
+@media (max-width: 84em) {
+  .col {
+    width: calc(36.333333% - 4rem);
+  }
+}
+/****************************/
+/* Below 1200px (900 - 1200px: Tablet landscape  75em = 1200px ) */
+/****************************/
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%; /* 1 rem = 9px, 9/16 = 50%*/
+  }
+  .about-col-2 p {
+    letter-spacing: 0.6px;
+    line-height: 23px;
+    font-size: 1.4rem;
+  }
+  .col {
+    width: calc(40% - 4rem);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .col {
+    width: 50%;
+  }
+}
+
+/****************************/
+/* Below 900px (600 - 900px: Tablet portrait 56.25em = 900px ) */
+/****************************/
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%; /*1 rem = 8px, 8/16 = 50%*/
+  }
+
+  header .btn {
+    display: block;
+  }
+
+  header .menu {
+    position: fixed;
+    /* background: #f7f7f7; */
+    background: #1483d5;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 400px;
+    height: 70vh;
+    top: 0;
+    right: -110%;
+    padding: 80px 50px;
+    transition: 0.5s;
+    transition-property: right;
+  }
+  header .menu.active {
+    right: 0;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+  .heading-hero--main {
+    letter-spacing: 2rem;
+    font-size: 6rem;
+    text-align: center;
+  }
+  .heading-hero--sub {
+    letter-spacing: 0.5rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .hero {
+    width: auto;
+  }
+  .button,
+  .button:link,
+  .button:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.2rem 2.2rem;
+  }
+
+  .heading-secondary {
+    font-size: 3rem;
+  }
+
+  .about-col {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 8%;
+  }
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    height: 600px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about-col-1 {
+    height: 800px;
+  }
+  .about-container {
+    padding: 10px 50px;
+  }
+  .cta-container {
+    padding: 10px 50px;
+  }
+  .col {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  .about-container {
+    padding: 10px 30px;
+  }
+  .cta-container {
+    padding: 10px 30px;
+  }
+  .footer-col {
+    width: 100%;
+  }
+  .col {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 880px) {
+}

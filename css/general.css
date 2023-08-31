@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;200;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+.button,
+.button:link,
+.button:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.2rem 2.2rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+.button--full {
+  background-color: #1864ab;
+  color: #fff;
+}
+.button--full:hover,
+.button--full:active {
+  background-color: #5e6e7f;
+}
+.button--outline {
+  background-color: #fff;
+  color: #555;
+}
+.button--outline:hover,
+.button--outline:active {
+  background-color: #b3b3b3;
+
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+}
+.button::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.button:active,
+.button:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+}
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+.button--blue {
+  background-color: #1864ab;
+  color: #fff;
+}
+
+.button--blue::after {
+  background-color: #fff;
+}
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #686868, #333);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+  margin-bottom: 5rem;
+}
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(#333, 0.2);
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}

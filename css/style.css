@@ -1,0 +1,634 @@
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 20px 100px;
+  z-index: 999;
+}
+header.sticky {
+  background-color: #f7f7f7;
+  padding: 5px 100px;
+}
+header .logo {
+  width: 11rem;
+  height: 90%;
+  transition: 0.6s;
+}
+header .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .menu li {
+  position: relative;
+  list-style: none;
+}
+header .menu li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+  transition-property: color, background;
+}
+header .menu a:hover {
+  color: #000;
+  background: #fff;
+}
+header .btn {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+header.sticky li a {
+  color: #000;
+}
+header.sticky a:hover {
+  color: #fff;
+  background: #000;
+}
+
+header.sticky .btn {
+  color: #000;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url(../images/excavation.medium.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 50px;
+}
+.heading-hero {
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 80px;
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heading-hero--main {
+  font-size: 8rem;
+  font-weight: 600;
+  letter-spacing: 3.5rem;
+  text-shadow: 0 3px black;
+  text-align: center;
+}
+.heading-hero--sub {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  text-shadow: 0 2px black;
+  text-align: center;
+}
+
+/* About */
+.section-about {
+  background-color: #f7f7f7;
+  padding: 10rem 0;
+  width: 100%;
+}
+
+.about-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 100px;
+}
+
+.about-container:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  gap: 2rem;
+}
+
+.about-col-1 {
+  background: url("../images/excavator_medium.jpg") no-repeat center;
+  background-size: cover;
+  height: 700px;
+}
+
+.about-col-2 {
+  padding: 15px 50px;
+}
+
+.about-col-2 p {
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+  margin-top: 4.5rem;
+}
+
+/* Services */
+.section-services {
+  background-color: #f7f7f7;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10rem 0;
+  transition: all 0.3s ease;
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col {
+  width: calc(30% - 1.5rem);
+  margin: 3.7rem;
+  cursor: pointer;
+}
+.wrapper {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.front,
+.back {
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 520px;
+  height: auto;
+  border-radius: 10px;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.front--1:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  opacity: 1;
+  /* background-color: #efefef; */
+  background-image: url(../images/concrete_1.jpg);
+  background-size: cover;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.front--2:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  opacity: 1;
+  /* background-color: #efefef; */
+  background-image: url(../images/excavation_1.jpg);
+  background-size: cover;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.wrapper:hover .front,
+.wrapper:hover .back {
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.inner {
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 53%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  perspective: inherit;
+  z-index: 2;
+}
+.wrapper .back {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+.wrapper .front {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+.wrapper:hover .back {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+.wrapper:hover .front {
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+.front .inner h4 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  color: #000;
+  text-align: center;
+  position: relative;
+}
+.front .inner h4:after {
+  content: "";
+  width: 8rem;
+  height: 1px;
+  position: absolute;
+  background: #000;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -0.35rem;
+}
+.inner a {
+  text-decoration: none;
+}
+.inner a:hover {
+  color: #000;
+  transition: all 0.3s;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 185, 0, 0.85),
+    rgba(255, 119, 48, 0.85)
+  );
+}
+.card__heading-span--2 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(41, 152, 255, 0.85),
+    rgba(86, 67, 250, 0.85)
+  );
+}
+.back_1 {
+  background-color: #ff7730;
+}
+.back_2 {
+  background-color: #2998ff;
+}
+.button--white {
+  background-color: #fff;
+  color: #777;
+}
+
+/* Gallery */
+.section-gallery {
+  background-color: #f7f7f7;
+  padding: 10rem 0 15rem 0;
+}
+
+.gallery {
+  width: 120rem;
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+.gallery img {
+  width: 100%;
+}
+/* CTA */
+.section-cta {
+  background-color: #f7f7f7;
+  padding: 10rem 0;
+  width: 100%;
+}
+
+.cta-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+}
+.section-cta:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #f7f7f7;
+
+  z-index: -1;
+}
+.contact-box {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+.left {
+  background: url("../images/excavation_2.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+.right {
+  padding: 75px 40px;
+}
+h2 {
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+}
+h2:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: orange;
+}
+.field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  min-height: 150px;
+}
+/* .button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: orange;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: rgba(30, 85, 250, 0.47);
+} */
+.field:focus {
+  border: 2px solid rgba(30, 85, 250, 0.47);
+  background-color: #fff;
+}
+/* Footer */
+
+.footer {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #f7f7f7;
+  color: #777;
+}
+.footer-container {
+  max-width: 120rem;
+  margin: auto;
+}
+
+.row {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+.footer ul {
+  list-style: none;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h3 {
+  font-size: 18px;
+  color: #777;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: orange;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  /* text-transform: capitalize; */
+  /* color: #ffffff; */
+  text-decoration: none;
+  font-weight: 300;
+  color: #999;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #000;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  font-size: 22px;
+  height: 40px;
+  width: 40px;
+  background-color: #000;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+.footer__logo {
+  width: 15rem;
+  height: auto;
+}
+
+.contact .info li span:nth-child(1) {
+  color: #999;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Popup */
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup__close:link,
+.popup__close:visited {
+  color: #777;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  line-height: 1;
+}
+.popup__close:hover {
+  color: #1864ab;
+}
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 65%;
+  background-color: #eee;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  display: table;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.25);
+  transition: all 0.5s 0.2s;
+}
+.popup__left {
+  width: 33.333333%;
+  display: table-cell;
+}
+.popup__right {
+  width: 66.6666667%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3rem 5rem;
+}
+.popup__img {
+  display: block;
+  width: 100%;
+}
+.popup__text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+
+  -moz-column-count: 2;
+  -moz-column-gap: 4rem;
+  -moz-column-rule: 1px solid #eee;
+
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 1px solid #eee;
+
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/*Open states*/
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup:target .popup__content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
